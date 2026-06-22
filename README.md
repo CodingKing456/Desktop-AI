@@ -14,7 +14,7 @@ Requirements:
 8.  py -m pip installcomtypes
  9. py -m pip install PyAudio
 _____________________________________________________________________________________________________________________________
-After doing the above activities copy and paste the run_jarvis.bat file in your laptop's startup folder so it always starts when you are online and when your laptop is on. It will have audio access at all times.
+After doing the above activities copy and paste the run_jarvis.bat ( make sure to enter the path required) file in your laptop's startup folder so it always starts when you are online and when your laptop is on. It will have audio access at all times.
 _____________________________________________________________________________________________________________________________
 Features are( IT REQUIRES AN ANTIVE INTERNET CONNECTION.):
 1. Wake word detection ("Jarvis")
