@@ -1,4 +1,4 @@
-# Desktop-AI (for Windows ONLY)
+# Desktop-AI (JARVIS) (for Windows ONLY)
 This is a desktop AI called 'Jarvis" which uses an API key to connect to Gemini then perform various tasks.
 _____________________________________________________________________________________________________________________________
 Requirements: 
