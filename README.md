@@ -4,15 +4,15 @@ ________________________________________________________________________________
 Requirements: 
  Installation of PYCharm
  !!Make a folder named jarvis and add all the files except owner.wav. You put owner.wav in voices folder made in the Jarvis folder.!!
- py -m pip install google-generativeai
-  py -m pip install SpeechRecognition
- py -m pip install resemblyzer
- py -m pip install numpy
- py -m pip install edge-tts
- py -m pip install pygame
- py -m pip installpycaw
- py -m pip installcomtypes
- py -m pip install PyAudio
+1. py -m pip install google-generativeai
+2.  py -m pip install SpeechRecognition
+3. py -m pip install resemblyzer
+4.  py -m pip install numpy
+5.  py -m pip install edge-tts
+6.  py -m pip install pygame
+7.  py -m pip installpycaw
+8.  py -m pip installcomtypes
+ 9. py -m pip install PyAudio
 _____________________________________________________________________________________________________________________________
 After doing the above activities copy and paste the run_jarvis.bat file in your laptop's startup folder so it always starts when you are online and when your laptop is on. It will have audio access at all times.
 _____________________________________________________________________________________________________________________________
