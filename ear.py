@@ -1,10 +1,3 @@
-"""
-Handles listening for commands and verifying that the speaker is actually
-the owner. Voice matching uses Resemblyzer - it compares a live recording
-against a saved voice print (voices/owner.wav) and rejects anyone who
-doesn't match closely enough.
-"""
-
 import os
 import numpy as np
 import speech_recognition as sr
