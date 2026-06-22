@@ -1,7 +1,4 @@
 """
-Fallback brain - if Jarvis doesn't recognize a command as a system action,
-it gets sent here to ask Gemini for a normal conversational response.
-
 Requires GEMINI_API_KEY to be set as an environment variable. Get a free
 key at https://aistudio.google.com/app/apikey
 """
