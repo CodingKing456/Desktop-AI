@@ -1,8 +1,3 @@
-"""
-Text-to-speech using edge-tts (Microsoft's free online voices) with pygame
-handling playback. Each call generates a temp mp3, plays it, then deletes it.
-"""
-
 import os
 import time
 import asyncio
