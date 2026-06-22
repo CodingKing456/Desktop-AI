@@ -1,9 +1,3 @@
-"""
-The core command handler. Takes a transcribed voice command and decides
-what to do with it - system actions get handled directly, anything else
-falls through to brain.py for a conversational response.
-"""
-
 import os
 import ctypes
 import webbrowser
