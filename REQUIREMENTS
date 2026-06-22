@@ -1,0 +1,10 @@
+Make sure to install these (the commands are given) commands in PyCharm's terminal:
+ py -m pip install google-generativeai
+  py -m pip install SpeechRecognition
+ py -m pip install resemblyzer
+ py -m pip install numpy
+ py -m pip install edge-tts
+ py -m pip install pygame
+ py -m pip installpycaw
+ py -m pip installcomtypes
+ py -m pip install PyAudio
