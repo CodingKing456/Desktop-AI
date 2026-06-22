@@ -25,6 +25,8 @@ Features are( IT REQUIRES AN ANTIVE INTERNET CONNECTION.):
 6. Falls back to Gemini for general conversation
 7. Text-to-speech replies via edge-tts
 _____________________________________________________________________________________________________________________________
+Make sure to download all the .py files and run them in pycharm to install all the needed packages.
+_____________________________________________________________________________________________________________________________
 SEtUP:
 Clone the repo and install dependencies:
 pip install -r requirements.txt
@@ -33,6 +35,8 @@ pip install -r requirements.txt
  Get a free Gemini API key from
    [Google AI Studio](https://aistudio.google.com/app/apikey) and set it
    as an environment variable:
-   setx GEMINI_API_KEY "your-key-here"
+   setx GEMINI_API_KEY "your-key-here" (paste this with the GEmini API key in the PYcharm terminal)
+You do not need to import your GEMINI API key in the code.
+_____________________________________________________________________________________________________________________________
   !! IT REQUIRES AN ACTIVE INTERNET CONNECTION.!!
 _____________________________________________________________________________________________________________________________
