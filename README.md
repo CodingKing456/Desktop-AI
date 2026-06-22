@@ -1,6 +1,22 @@
 # Desktop-AI (for Windows ONLY)
 This is a desktop AI called 'Jarvis" which uses an API key to connect to Gemini then perform various tasks.
-Fetures are( IT REQUIRES AN ANTIVE INTERNET CONNECTION.):
+_____________________________________________________________________________________________________________________________
+Requirements: 
+ Installation of PYCharm
+ !!Make a folder named jarvis and add all the files except owner.wav. You put owner.wav in voices folder made in the Jarvis folder.!!
+ py -m pip install google-generativeai
+  py -m pip install SpeechRecognition
+ py -m pip install resemblyzer
+ py -m pip install numpy
+ py -m pip install edge-tts
+ py -m pip install pygame
+ py -m pip installpycaw
+ py -m pip installcomtypes
+ py -m pip install PyAudio
+_____________________________________________________________________________________________________________________________
+After doing the above activities copy and paste the run_jarvis.bat file in your laptop's startup folder so it always starts when you are online and when your laptop is on. It will have audio access at all times.
+_____________________________________________________________________________________________________________________________
+Features are( IT REQUIRES AN ANTIVE INTERNET CONNECTION.):
 1. Wake word detection ("Jarvis")
 2.  Voice verification - only responds to the owner's voice
 3. System controls: lock, shutdown (with confirmation)
@@ -8,6 +24,7 @@ Fetures are( IT REQUIRES AN ANTIVE INTERNET CONNECTION.):
 5. Volume up / down / mute
 6. Falls back to Gemini for general conversation
 7. Text-to-speech replies via edge-tts
+_____________________________________________________________________________________________________________________________
 SEtUP:
 Clone the repo and install dependencies:
 pip install -r requirements.txt
@@ -17,4 +34,5 @@ pip install -r requirements.txt
    [Google AI Studio](https://aistudio.google.com/app/apikey) and set it
    as an environment variable:
    setx GEMINI_API_KEY "your-key-here"
-   IT REQUIRES AN ANTIVE INTERNET CONNECTION.
+  !! IT REQUIRES AN ACTIVE INTERNET CONNECTION.!!
+_____________________________________________________________________________________________________________________________
