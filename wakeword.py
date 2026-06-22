@@ -1,9 +1,3 @@
-"""
-Listens to the mic in a loop and blocks until it hears the word "jarvis".
-This runs on repeat in main.py before each session, so it's intentionally
-lightweight - just wake word detection, no command parsing here.
-"""
-
 import speech_recognition as sr
 
 
