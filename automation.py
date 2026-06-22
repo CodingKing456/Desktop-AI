@@ -1,9 +1,3 @@
-"""
-Standalone helper functions for system control, web actions, and volume.
-Not currently wired into core.py (which has its own inline versions of
-some of this) - kept here as reusable utilities / for future use.
-"""
-
 import os
 import platform
 import webbrowser
