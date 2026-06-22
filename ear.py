@@ -1,0 +1,78 @@
+"""
+Handles listening for commands and verifying that the speaker is actually
+the owner. Voice matching uses Resemblyzer - it compares a live recording
+against a saved voice print (voices/owner.wav) and rejects anyone who
+doesn't match closely enough.
+"""
+
+import os
+import numpy as np
+import speech_recognition as sr
+from resemblyzer import VoiceEncoder, preprocess_wav
+
+OWNER_VOICE_PATH = "voices/owner.wav"
+MATCH_THRESHOLD = 0.70  # Lower = more lenient, higher = stricter matching
+
+if not os.path.exists(OWNER_VOICE_PATH):
+    print("\nCRITICAL ERROR: 'voices/owner.wav' is missing!")
+    print("Record a 5-10 second clip of your voice, name it 'owner.wav', "
+          "and drop it in the 'voices' folder.\n")
+    raise FileNotFoundError("Owner voice profile not found.")
+
+print("Loading voice recognition engine...")
+encoder = VoiceEncoder(device="cpu")
+owner_wav = preprocess_wav(OWNER_VOICE_PATH)
+owner_embedding = encoder.embed_utterance(owner_wav)
+print("Voice recognition active - Jarvis will only respond to the owner's voice.")
+
+
+def verify_owner(audio, threshold=MATCH_THRESHOLD):
+    """Compares a live recording against the saved owner voice print."""
+    temp_path = "temp_voice.wav"
+    with open(temp_path, "wb") as f:
+        f.write(audio.get_wav_data())
+
+    try:
+        wav = preprocess_wav(temp_path)
+        speaker_embedding = encoder.embed_utterance(wav)
+
+        similarity = np.dot(owner_embedding, speaker_embedding)
+        print(f"Voice match score: {similarity:.2f}")
+
+        return similarity >= threshold
+
+    except Exception as e:
+        print(f"Voice verification error: {e}")
+        return False
+
+    finally:
+        if os.path.exists(temp_path):
+            os.remove(temp_path)
+
+
+def listen():
+    """Records a command from the mic and returns the transcribed text,
+    but only if the speaker passes voice verification."""
+    recognizer = sr.Recognizer()
+    recognizer.dynamic_energy_threshold = True
+    recognizer.pause_threshold = 1.0
+
+    with sr.Microphone() as source:
+        recognizer.adjust_for_ambient_noise(source, duration=0.5)
+
+        try:
+            audio = recognizer.listen(source, timeout=4, phrase_time_limit=6)
+
+            if not verify_owner(audio):
+                print("Unauthorized voice detected - command ignored.")
+                return ""
+
+            text = recognizer.recognize_google(audio).lower()
+            print(f"Owner said: {text}")
+            return text
+
+        except sr.UnknownValueError:
+            return ""
+        except Exception as e:
+            print(f"Listening error: {e}")
+            return ""
