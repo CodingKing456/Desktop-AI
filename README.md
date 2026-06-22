@@ -29,14 +29,12 @@ Make sure to download all the .py files and run them in pycharm to install all t
 _____________________________________________________________________________________________________________________________
 SEtUP:
 Clone the repo and install dependencies:
-pip install -r requirements.txt
-  Record a 5-10 second clip of your own voice, save it as `owner.wav`,
+1. pip install -r requirements.txt
+ 2. Record a 5-10 second clip of your own voice, save it as `owner.wav`,
    and place it in a `voices/` folder in the project root.
- Get a free Gemini API key from
-   [Google AI Studio](https://aistudio.google.com/app/apikey) and set it
-   as an environment variable:
-   setx GEMINI_API_KEY "your-key-here" (paste this with the GEmini API key in the PYcharm terminal)
-You do not need to import your GEMINI API key in the code.
+ 3. Get a free Gemini API key from [Google AI Studio](https://aistudio.google.com/app/apikey) and set it as an environment variable:
+   4. setx GEMINI_API_KEY "your-key-here" (paste this with the GEmini API key in the PYcharm terminal)
+5. You do not need to import your GEMINI API key in the code.
 _____________________________________________________________________________________________________________________________
   !! IT REQUIRES AN ACTIVE INTERNET CONNECTION.!!
 _____________________________________________________________________________________________________________________________
